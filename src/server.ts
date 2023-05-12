@@ -1,6 +1,7 @@
-
 import mongoose from "mongoose";
 // const mongoose = require("mongoose");
+
+import app from './app';
 
 const port = 5000;
 
@@ -17,11 +18,7 @@ async function bootstrap() {
     console.log("Failed to connect database", err);
   }
 }
-
 bootstrap();
 
 
 
-// app.listen(port, () => {
-//   console.log(`Server listening on port ${port}`);
-// });
