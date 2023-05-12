@@ -31,4 +31,14 @@
     "dev": "ts-node-dev --respawn --transpile-only ./src/server.ts",
 
 
+    #3 How to organize your code alittle more . install and implement types
+    --------------------------------------------
+    
+    
+    
+    install @types/  express,cors== dev-dependency 
+
+    
+
+
 */
