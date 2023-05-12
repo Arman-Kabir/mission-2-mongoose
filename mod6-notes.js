@@ -20,5 +20,15 @@
     npm install mongoose --save
     
 
+    created src folder to have my files. 
+    First file -- server.ts.......
+    some give it index.ts or app.ts
+
+    ----to run file- we need - ts-node-dev
+    npm i ts-node-dev --save-dev
+
+    * in package.json file -> in scripts---add
+    "dev": "ts-node-dev --respawn --transpile-only ./src/server.ts",
+
 
 */
