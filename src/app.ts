@@ -32,7 +32,7 @@ app.get("/", (req: Request, res: Response, next: NextFunction) => {
     password: "string";
     name: {
       firstName: string;
-      middlename?: string;
+      middleName?: string;
       lastName: string;
     };
     dateOfBirth?: string;
@@ -55,52 +55,76 @@ app.get("/", (req: Request, res: Response, next: NextFunction) => {
       type: String,
       required: true,
     },
-    password:{
-        type:String,
-        required:true
+    password: {
+      type: String,
+      required: true,
     },
-    name:{
-        firstName:{
-            type:String,
-            required:true,
-        },
-        middleName:{
-            type:String,
-        },
-        lastName:{
-            type:String,
-            required:true,
-        }
+    name: {
+      firstName: {
+        type: String,
+        required: true,
+      },
+      middleName: {
+        type: String,
+      },
+      lastName: {
+        type: String,
+        required: true,
+      },
     },
-    dateOfBirth:{
-        type:String
+    dateOfBirth: {
+      type: String,
     },
     gender: {
-        type:String,
-        enum:['male','female']
+      type: String,
+      enum: ["male", "female"],
     },
-    email:{
-        type:String,
-        required:true,
+    email: {
+      type: String,
+      required: true,
     },
-    contactNo:{
-        type:String,
-        required:true,
+    contactNo: {
+      type: String,
+      required: true,
     },
-    emergencyContactNo:{
-        type:String,
-    } ,
-    presentAddress:{
-        type:String,
-    } ,
-    permanentAddress:{
-        type:String,
-        required:true,
-    } ,   
-    // avatar:{
-    //     type:String,
-    // }
+    emergencyContactNo: {
+      type: String,
+    },
+    presentAddress: {
+      type: String,
+    },
+    permanentAddress: {
+      type: String,
+      required: true,
+    },
   });
+  // Create a model
+  const User = model<IUser>("User", userSchema);
+
+  //(async function) ---> database query
+  const createUserToDB = async () => {
+    //   instance
+    const user = new User({
+      id: "778",
+      role: "student",
+      password: "jhakanaka",
+      name: {
+        firstName: "Mr.mezbaul",
+        middleName: "abedin",
+        lastName: "persian",
+      },
+      gender: "male",
+      email: "abc@gmail.com",
+      contactNo: "0177777777",
+      emergencyContactNo: "01888888888",
+      presentAddress: "Uganda",
+      permanentAddress: "USA",
+    });
+    await user.save();
+  };
+
+  createUserToDB();
+  console.log(User);
 });
 
 export default app;

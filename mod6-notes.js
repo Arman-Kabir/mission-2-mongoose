@@ -40,7 +40,13 @@
     #4 -- How To relate Interface and schema
     ----------------------------------------------
 
-    * Interface -> Schema using INterface
+    * Interface -> Schema using interface
+
+
+
+    #5 Create Model using Interface , Schema and Insert Data
+    -----------------------------------------------------
+    *model -->Query on model
 
 
     
