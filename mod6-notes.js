@@ -73,6 +73,10 @@
 ------------------------------------------------
     route->controller->service
 
+    to post -> receive data from front-end using req.body in the controller
+
+    
+
 
 
     
