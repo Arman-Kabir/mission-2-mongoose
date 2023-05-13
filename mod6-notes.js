@@ -42,12 +42,12 @@
 
     * Interface -> Schema using interface
 
-     /*
+     
     Step1:Interface
     Step2:Schema
     Step3:Model
     Step4: Database Query
-    */
+    
 
 
 
