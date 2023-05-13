@@ -75,7 +75,11 @@
 
     to post -> receive data from front-end using req.body in the controller
 
-    
+
+    #10: What is instance methods ,built custom instance method
+    ----------------------------------------------------------------
+    *instance methods-->instance er methods
+    *class -> instance + (instance er sathe methods thakle seita instance methods)
 
 
 

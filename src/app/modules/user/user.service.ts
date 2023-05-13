@@ -4,8 +4,8 @@ import User from "./user.model";
 //(async function) ---> database query
 export const createUserToDB = async (payload: IUser): Promise<IUser> => {
   //   instance
-  const user = new User(payload);
-  await user.save();
+  const user = new User(payload); // User -> class; user -> instance
+  await user.save(); // .save holo instance methods == built-in instance methods; custom instance methods..
   return user;
 };
 
