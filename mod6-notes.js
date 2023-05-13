@@ -65,8 +65,13 @@
     src->(folder) app --> everything of files then app->(folder) modules
 
 
-    #7 7: More Refactoring, Test api to insert data
+    #7: More Refactoring, Test api to insert data
 --------------------------------------------------------
+
+
+    #8: Create and Test Post Route , Refactor Code
+------------------------------------------------
+    route->controller->service
 
 
 
