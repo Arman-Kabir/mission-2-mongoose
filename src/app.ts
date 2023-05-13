@@ -25,81 +25,9 @@ app.get("/", (req: Request, res: Response, next: NextFunction) => {
     */
   res.send("Hello World!");
 
-  //creating an interface
-  interface IUser {
-    id: string;
-    role: "student";
-    password: "string";
-    name: {
-      firstName: string;
-      middleName?: string;
-      lastName: string;
-    };
-    dateOfBirth?: string;
-    gender: "male" | "female";
-    email?: string;
-    contactNo: string;
-    emergencyContactNo: string;
-    presentAddress: string;
-    permanentAddress: string;
-  }
+ 
 
-  //creating schema using interface
-  const userSchema = new Schema<IUser>({
-    id: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-    role: {
-      type: String,
-      required: true,
-    },
-    password: {
-      type: String,
-      required: true,
-    },
-    name: {
-      firstName: {
-        type: String,
-        required: true,
-      },
-      middleName: {
-        type: String,
-      },
-      lastName: {
-        type: String,
-        required: true,
-      },
-    },
-    dateOfBirth: {
-      type: String,
-    },
-    gender: {
-      type: String,
-      enum: ["male", "female"],
-    },
-    email: {
-      type: String,
-      required: true,
-    },
-    contactNo: {
-      type: String,
-      required: true,
-    },
-    emergencyContactNo: {
-      type: String,
-    },
-    presentAddress: {
-      type: String,
-    },
-    permanentAddress: {
-      type: String,
-      required: true,
-    },
-  });
-  // Create a model
-  const User = model<IUser>("User", userSchema);
+ 
 
   //(async function) ---> database query
   const createUserToDB = async () => {
@@ -128,3 +56,18 @@ app.get("/", (req: Request, res: Response, next: NextFunction) => {
 });
 
 export default app;
+
+/*breakdown
+interface -> interface.ts
+Schema,model -> model.ts
+
+route
+
+route function->controller.ts
+
+database query function --> service.ts
+
+*/
+
+
+

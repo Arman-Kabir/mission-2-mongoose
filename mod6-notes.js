@@ -49,6 +49,15 @@
     *model -->Query on model
 
 
+
+    #6 How to organize your structure , MVC vs Modular
+    -----------------------------------------------------
+
+    // Pattern MVC , Modular - we do modular
+
+    src->(folder) app --> everything of files then app->(folder) modules
+
+
     
 
 
