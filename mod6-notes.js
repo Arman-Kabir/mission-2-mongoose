@@ -35,8 +35,13 @@
     --------------------------------------------
     
     
-    
     install @types/  express,cors== dev-dependency 
+
+    #4 -- How To relate Interface and schema
+    ----------------------------------------------
+
+    * Interface -> Schema using INterface
+
 
     
 
