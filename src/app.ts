@@ -1,11 +1,13 @@
-import express, { Application, Request, Response } from "express";
+import express, { Application } from "express";
 // const express = require("express");
 import cors from "cors";
-import { NextFunction } from "connect";
-import { Schema, model } from "mongoose";
 
 const app: Application = express();
-// console.log(app);
+
+//Application routes
+import userRoutes from './app/modules/user/user.route';
+
+
 
 //using cors
 app.use(cors());
@@ -14,17 +16,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req: Request, res: Response, next: NextFunction) => {
-  //inserting a test data into mongodb
+// app.get("/api/v1/user",userRoutes );
+app.use('/api/v1/user',userRoutes);
 
-  /*
-    Step1:Interface
-    Step2:Schema
-    Step3:Model
-    Step4: Database Query
-    */
-
-});
 
 export default app;
 
@@ -40,6 +34,3 @@ database query function --> service.ts
 **Data that maintains business logic - i must keep them in service.If we choose sql database inatead of mongoose - then we can only modify the service.ts
 
 */
-
-
-
