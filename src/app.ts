@@ -23,36 +23,7 @@ app.get("/", (req: Request, res: Response, next: NextFunction) => {
     Step3:Model
     Step4: Database Query
     */
-  res.send("Hello World!");
 
- 
-
- 
-
-  //(async function) ---> database query
-  const createUserToDB = async () => {
-    //   instance
-    const user = new User({
-      id: "778",
-      role: "student",
-      password: "jhakanaka",
-      name: {
-        firstName: "Mr.mezbaul",
-        middleName: "abedin",
-        lastName: "persian",
-      },
-      gender: "male",
-      email: "abc@gmail.com",
-      contactNo: "0177777777",
-      emergencyContactNo: "01888888888",
-      presentAddress: "Uganda",
-      permanentAddress: "USA",
-    });
-    await user.save();
-  };
-
-  createUserToDB();
-  console.log(User);
 });
 
 export default app;
@@ -66,6 +37,7 @@ route
 route function->controller.ts
 
 database query function --> service.ts
+**Data that maintains business logic - i must keep them in service.If we choose sql database inatead of mongoose - then we can only modify the service.ts
 
 */
 

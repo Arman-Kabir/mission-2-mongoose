@@ -57,3 +57,5 @@ import { IUser } from "./user.interface";
   });
   // Create a model
   const User = model<IUser>("User", userSchema);
+
+  export default User;
