@@ -82,6 +82,16 @@
     *class -> instance + (instance er sathe methods thakle seita instance methods)
 
 
+    #11: What is statics ,built custom static method
+    ------------------------------------------------------
+
+    class->Attached->Method->Directly call using Class
+    //user= new User
+    //user.   -> instance methods
+    //User.getAdminUsers() // class dia jokhon sorasori method access kori
+
+
+
 
     
 
