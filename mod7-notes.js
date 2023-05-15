@@ -34,5 +34,13 @@
 
         sorting  --> .sort({age:1})--sorts in ascending order ==>  .sort({age:-1}) --sorts in descending order
 
+
+    #3 Explore $in , $nin , Nested Condition,
+    --------------------------------------------------
+        new {} when using operators
+        { age: { $gte:18, $lt:30 } } --> , is called implicit and;
+        { $in: [18, 20] } --> works like 'or' ||| it is also called implicit and;
+        { gender: 'Female', age: { $nin: [18, 23,30,46,23] } } ---> not in
+
         
 */
