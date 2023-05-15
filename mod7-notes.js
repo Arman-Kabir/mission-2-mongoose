@@ -18,4 +18,21 @@
             *Studio 3T
             *NoSql Booster
 
+
+
+    #2: Explore $ne , $neq , $gt , $lt , $gte , $lte Operator
+    -------------------------------------------------------------
+        *search --> mongodb operators -> Query and Projection Operators 
+        when using any operator --> we must bring a new {}
+        
+        *$eq *$ne *$gt *$lt *$lte *$gte
+
+
+        *field filtering --> {gender:1}
+
+        projection --> .project({age:1})
+
+        sorting  --> .sort({age:1})--sorts in ascending order ==>  .sort({age:-1}) --sorts in descending order
+
+        
 */
