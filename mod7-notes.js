@@ -42,5 +42,35 @@
         { $in: [18, 20] } --> works like 'or' ||| it is also called implicit and;
         { gender: 'Female', age: { $nin: [18, 23,30,46,23] } } ---> not in
 
+
+    4: Explore $and , $or , Implicit vs explicit and
+------------------------------------------------------------
+    // db.practice.find({
+//     $and: [
+//         { gender: 'Female' },
+//         { age: { $lt: 30 } },
+//         { "skills.name": 'JAVASCRIPT' }
+//     ]
+// }).project({ gender: 1, age: 1, "skills.name": 1 })
+
+// db.practice.find({
+//     $or: [
+//       {"skills.name":'PYTHON'},
+//         { age: { $lt: 30 } },
+//         { "skills.name": 'JAVASCRIPT' }
+//     ]
+// }).project({ gender: 1, age: 1, "skills.name": 1 })
+
+
+db.practice.find({
+    "skills.name":{$in: ['JAVASCRIPT','PYTHON'] }
+}).project({ gender: 1, age: 1, "skills.name": 1 })
+
+*** we can't use implicit and -- in case of same data. Instead we use explicit and.
+    $and: [
+        { age: { $ne: 18 } },
+        { age: { $gt: 15 } }
+    ]
+
         
 */
