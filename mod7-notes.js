@@ -72,5 +72,13 @@ db.practice.find({
         { age: { $gt: 15 } }
     ]
 
+    #5: Explore $exists , $type , $size operator
+    ---------------------------------------------------
+    $exists only finds out if field is available
+
+    *$exists (true | false)
+    *$type
+    *$size (to find empty array or array size) --> In array query operatore
+
         
 */
