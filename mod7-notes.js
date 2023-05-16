@@ -108,6 +108,18 @@
     *{ $push: { <field1>: <value1>, ... } }
     
     $each is used so that array values don't get inserted as an array.-- inserted as individual data.
+
+
+    #8: Explore $unset , $pop , $pull , $pullALL
+-------------------------------------------------
+        *******Field Update Operators*********
+        *{ $unset: { <field1>: "", ... } } -- removes a property / field from json data, first finds data using id..
+        
+        ****Array Update Operators****
+        { $pop: { <field>: <-1 | 1>, ... } }  ||||$pop: { languages: -1 }
+        
+
+
      
 
         
