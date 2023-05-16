@@ -117,6 +117,11 @@
         
         ****Array Update Operators****
         { $pop: { <field>: <-1 | 1>, ... } }  ||||$pop: { languages: -1 }
+
+        *{ $pull: { <field1>: <value|condition>, <field2>: <value|condition>, ... } }
+
+        *$pullAll ---->{ $pullAll: { <field1>: [ <value1>, <value2> ... ], ... } }
+
         
 
 
