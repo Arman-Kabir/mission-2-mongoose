@@ -91,5 +91,24 @@
     * 
 
 
+    #7: Explore $set , $addToSet , $push operator
+    ------------------------------------------------
+    to find and id::: {_id:ObjectId("6406ad63fc13ae5a40000065")}
+
+    *********Field Update Operators*************
+    { $set: { <field1>: <value1>, ... } } ----> we can use $set in primitive types of data to update
+
+
+    ******Array Update Operators********
+    * $addToSet ---> new value is not added -- if previous value is available.
+    * To insert in an array -- $addToSet is better.
+    
+    *{ $addToSet: { <field>: { $each: [ <value1>, <value2> ... ] } } }
+
+    *{ $push: { <field1>: <value1>, ... } }
+    
+    $each is used so that array values don't get inserted as an array.-- inserted as individual data.
+     
+
         
 */
