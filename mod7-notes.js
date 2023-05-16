@@ -87,6 +87,8 @@
     *db.practice.find({ interests: "Travelling" }).project({ interests: 1 })
     *db.practice.find({ interests: ["Gardening", "Writing", "Reading"] }).project({ interests: 1 })
     * interests: {$all:['Travelling','Cooking','Reading']} -->we take elements from array at any position
+    *  skills: { $elemMatch: { name: "JAVA", level: "Intermidiate" } }
+    * 
 
 
         
