@@ -82,5 +82,12 @@
     *$type
     *$size (to find empty array or array size) --> In array query operatore
 
+    #6: Explore $all , $elemMatch Operator Part1:
+    ------------------------------------------------
+    *db.practice.find({ interests: "Travelling" }).project({ interests: 1 })
+    *db.practice.find({ interests: ["Gardening", "Writing", "Reading"] }).project({ interests: 1 })
+    * interests: {$all:['Travelling','Cooking','Reading']} -->we take elements from array at any position
+
+
         
 */
