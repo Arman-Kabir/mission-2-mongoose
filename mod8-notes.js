@@ -33,5 +33,41 @@
         **{ $group: { _id: "$gender" } }
 
 
+         #5: Explore $group more , accumulator, $sort , $limit
+         --------------------------------------------------------
+         *$group: {
+            _id: null
+        }-----> gives us a document taking all documents
+
+        ****understand these well 
+        db.practice.aggregate([
+    { $match: { age: { $gt: 18 } } },
+    //group stage 
+    {
+        $group: {
+            _id: "$salary",
+            persons: { $sum: 1 }
+        }
+    },
+    {
+        //project stage 
+        $project: {
+            _id: 0,
+            salary: "$_id",
+            persons: 1
+        }
+    },
+    //sort stage 
+    {
+        $sort: { _id: -1 }
+    },
+    {
+        $limit: 3
+    }
+])
+
+#6: Explore Accumulator Operator using aggregation
+----------------------------------------------------
+    
 
 */
