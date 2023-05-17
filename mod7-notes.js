@@ -122,8 +122,28 @@
 
         *$pullAll ---->{ $pullAll: { <field1>: [ <value1>, <value2> ... ], ... } }
 
-        
 
+        #9: Explore deleteOne , deleteMany, dropCollection, createCollection
+        ------------------------------------------------------------------
+        *DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany, findOneAndDelete, or bulkWrite.
+
+        *db.practice.deleteOne({_id:ObjectId("6406ad65fc13ae5a400000c4")})
+
+        *db.createCollection('test1')
+        *db.test1.insertOne({name:'Persian'})
+        *db.test1.drop()
+
+
+        #10: Explore $inc , $min , How to explore documents
+        ------------------------------------------------
+        $inc
+        $rename
+        db.practice.updateMany(
+            {},
+            {$rename: {"favoutiteColor": "favouriteColor" }}   
+            )
+
+        $min 
 
      
 
