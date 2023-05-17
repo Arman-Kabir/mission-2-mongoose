@@ -22,6 +22,16 @@
                 }
             }
 
+    ** new collection with new field::: {$out:"salary"}
+
+    #4: Explore $group
+    ----------------------
+        update collection using aggregation -->
+        **{$merge: "practice"}
+        
+        *****$group -- finds out unique combinations
+        **{ $group: { _id: "$gender" } }
+
 
 
 */
