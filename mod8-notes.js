@@ -79,4 +79,74 @@
 ----------------------------------------------------
     
 
+#7: Explore $unwind
+-------------------------
+ {
+        //unwind stage 
+        $unwind: "$friends"
+    },
+    {
+        $group: {
+            _id: "$friends",
+            count: { $sum: 1 }
+        }
+    }
+
+    #8: Explore powerful Multi Stage Pipeline
+    -----------------------------------
+    $facet -- to create multi-stage pipeline
+
+    db.practice.aggregate([
+    { $match: { _id: ObjectId("6406ad63fc13ae5a40000064") } },
+    {
+        $facet: {
+            //Sub Pipeline
+            "friendsCount": [
+                //stage 
+                { $project: { friendsCount: { $size: "$friends" } } }
+
+            ],
+            //sub pipeline 
+            "interestsCount": [
+                { $project: { interestsCount: { $size: "$interests" } } }
+            ],
+            //sub pipeline
+            "skillsCount": [
+                { $project: { skillsCount: { $size: "$skills" } } }
+            ]
+        }
+
+    }
+])
+
+
+#9: Explore $lookup operator
+-------------------------
+    *referencing document
+    *local field  *Foreign Field
+
+    db.practice.aggregate([
+
+
+    {
+        $match: { email: "dladley0@washingtonpost.com" }
+    },
+    {
+        $lookup:{
+            from:"additionalInfo",
+            localField:'_id',
+            foreignField:'userId',
+            as:'additionalInformation'
+        }
+    }
+])
+
+
+    #10 Fix _id $lookup issue , overview of populate methodsx
+    updateOne(
+    {_id:ObjectId('64662d1261b4254f456bad4c')},
+    {$set:{userId:new ObjectId('6406ad63fc13ae5a40000064')}})
+
+
+
 */
