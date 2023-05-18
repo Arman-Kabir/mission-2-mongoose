@@ -33,11 +33,20 @@
         **{ $group: { _id: "$gender" } }
 
 
-         #5: Explore $group more , accumulator, $sort , $limit
+    #####5: Explore $group more , accumulator, $sort , $limit
          --------------------------------------------------------
+         *accumulator does adds... 
+
+         ** $group: {
+            _id:"$salary"
+        }
+        **_id-->gives us distinct values. 
+
          *$group: {
             _id: null
         }-----> gives us a document taking all documents
+
+        **if we give anything except _id--> then it takes them as accumulator object
 
         ****understand these well 
         db.practice.aggregate([
